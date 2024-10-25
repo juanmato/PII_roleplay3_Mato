@@ -1,8 +1,8 @@
-namespace Ucu.Poo.RoleplayGame
+namespace Ucu.Poo.RoleplayGame 
 {
-    public class Dwarf : Character
+    public class Knight : Hero
     {
-        public Dwarf(string name) : base(name, 100)
+        public Knight(string name) : base(name, 100)
         {
             this.AddItem(new Armor());
             this.AddItem(new Shield());
@@ -10,6 +10,3 @@ namespace Ucu.Poo.RoleplayGame
         }
     }
 }
-
-
-

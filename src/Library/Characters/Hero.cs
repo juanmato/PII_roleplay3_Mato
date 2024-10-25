@@ -2,20 +2,25 @@ namespace Ucu.Poo.RoleplayGame
 {
     public class Hero : Character
     {
-        public int VictoryPoints { get; private set; } = 0;
+        public int VictoryPoints { get; private set; }
 
         public Hero(string name, int initialHealth) : base(name, initialHealth)
         {
+            this.VictoryPoints = 0;
         }
 
-        public void GainVictoryPoints(int points)
+        public void AddVictoryPoints(int points)
         {
             this.VictoryPoints += points;
         }
 
-        public void DefeatEnemy(Enemy enemy)
+        // Override Cure method to heal if VictoryPoints >= 5
+        public override void Cure()
         {
-            this.GainVictoryPoints(enemy.VictoryPoints);
+            if (this.VictoryPoints >= 5)
+            {
+                base.Cure();
+            }
         }
     }
 }

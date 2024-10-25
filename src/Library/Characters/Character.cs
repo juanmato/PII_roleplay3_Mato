@@ -69,7 +69,7 @@ namespace Ucu.Poo.RoleplayGame
             }
         }
 
-        public void Cure()
+        public virtual void Cure()
         {
             this.Health = 100;
         }
